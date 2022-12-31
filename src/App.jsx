@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import LeftSide from "./components/LeftSide/LeftSide";
 import RightSide from "./components/RightSide/RightSide";
-
 const Hero = styled.div`
   height: 100vh;
   width: 100vw;
@@ -17,7 +16,6 @@ const Container = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
 `;
-
 function App() {
   return (
     <Hero>
