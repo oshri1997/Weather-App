@@ -36,8 +36,8 @@ const LeftSide = () => {
           <FormContainer>
             <Input
               type="text"
-              onChange={(e) => handleChange(e)}
               value={location}
+              onChange={(e) => handleChange(e)}
               placeholder="Enter Location"
             />
             <ButtonSearch type="submit" onClick={(e) => handleSubmit(e)}>

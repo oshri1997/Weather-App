@@ -1,7 +1,8 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-
+import moment from "moment";
 export const fetchWeather = createAsyncThunk("weather/fetchWeather", async (location) => {
+  const daysToReturn = {};
   const response = await axios({
     method: "GET",
     baseURL: import.meta.env.VITE_REACT_BASE_URL,
@@ -11,7 +12,13 @@ export const fetchWeather = createAsyncThunk("weather/fetchWeather", async (loca
       units: "metric",
     },
   });
-  return response.data;
+  daysToReturn.cod = response.data.cod;
+  daysToReturn.message = response.data.message;
+  daysToReturn.city = response.data.city;
+  daysToReturn.list = response.data.list.filter((day) => {
+    return moment(day.dt_txt).format("HH:mm:ss") === "12:00:00";
+  });
+  return daysToReturn;
 });
 
 const initialState = {
