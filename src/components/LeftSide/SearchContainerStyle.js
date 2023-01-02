@@ -1,7 +1,7 @@
 import styled from "styled-components";
-
+const imgUrl = new URL("../../assets/lake-background.jpg", import.meta.url).href;
 const LeftContianer = styled.div`
-  background: url("../src/assets/lake-background.jpg") no-repeat;
+  background: url(${imgUrl}) no-repeat;
   background-size: cover;
   height: 100%;
   border-radius: 20px;
