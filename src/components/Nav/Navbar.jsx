@@ -1,5 +1,6 @@
 import { BsMapFill, BsCloudSunFill } from "react-icons/bs";
 import { useSelector } from "react-redux";
+
 import {
   NavContainer,
   CityName,
@@ -10,7 +11,6 @@ import {
 
 const NavLeft = () => {
   const location = useSelector((state) => state.weather.data?.city);
-
   return (
     <NavContainer>
       <LogoContainer>

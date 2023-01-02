@@ -1,4 +1,4 @@
-import { Container, BigHeader, CardContent, MediumHeader, SmallHeader } from "./CardStyle";
+import { Container, BigHeader, CardContent, MediumHeader, SmallHeader } from "./DayCardStyle";
 import moment from "moment/moment";
 const Card = ({ data }) => {
   const date = moment(data.dt_txt).format("ddd MMM YYYY");

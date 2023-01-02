@@ -1,7 +1,7 @@
 import { TailSpin } from "react-loader-spinner";
 import { useSelector } from "react-redux";
 import moment from "moment/moment";
-import Days from "./Days";
+import Days from "./DaysContainer";
 import {
   Container,
   BigHeader,
@@ -12,12 +12,14 @@ import {
   RightChild,
   SmallHeader,
   DetailsContainer,
-} from "./RightSideStyle";
+} from "./ContentContainerStyle";
 
-const RightSide = () => {
+const ContentContainer = () => {
   const dataToday = useSelector((state) => state.weather.data?.list?.[0]);
   const loading = useSelector((state) => state.weather.loading);
+  const error = useSelector((state) => state.weather.error);
   const date = moment(dataToday?.dt_txt).format("ddd MMM YYYY");
+
   const content = () => {
     if (loading) {
       return (
@@ -64,8 +66,11 @@ const RightSide = () => {
         </>
       );
     }
+    if (!loading && !dataToday && error === "")
+      return <BigHeader color="#20242f">No Data Yet</BigHeader>;
+    if (error) return <BigHeader color="#20242f">Error-try again</BigHeader>;
   };
   return <Container>{content()}</Container>;
 };
 
-export default RightSide;
+export default ContentContainer;

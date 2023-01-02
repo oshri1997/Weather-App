@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import LeftSide from "./components/LeftSide/LeftSide";
-import RightSide from "./components/RightSide/RightSide";
+import LeftSide from "./components/LeftSide/SearchContainer";
+import ContentContainer from "./components/RightSide/ContentContainer";
 const Hero = styled.div`
   height: 100vh;
   width: 100vw;
@@ -21,7 +21,7 @@ function App() {
     <Hero>
       <Container>
         <LeftSide />
-        <RightSide />
+        <ContentContainer />
       </Container>
     </Hero>
   );

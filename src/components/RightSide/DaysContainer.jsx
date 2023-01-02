@@ -1,14 +1,13 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import Card from "./Card";
-import { DaysContainer, CardsContainer, Header } from "./DaysStyle";
+import Card from "./DayCard";
+import { DaysContainer, CardsContainer, Header } from "./DaysContainerStyle";
 
 const Days = () => {
   const daysData = useSelector((state) => state.weather.data?.list);
-  const { name: cityName, coutry: countryName } = useSelector(
+  const { name: cityName, country: countryName } = useSelector(
     (state) => state.weather.data?.city
   );
-  console.log(daysData);
   return (
     <>
       {daysData && (
