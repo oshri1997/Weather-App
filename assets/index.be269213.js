@@ -76,7 +76,7 @@ Error generating stack: `+s.message+`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 40px;
+  height: 80px;
   width: 100%;
   @media (max-width: 1280px) {
     width: 100%;
