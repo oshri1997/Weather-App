@@ -11,7 +11,6 @@ import {
   MediumHeader,
   RightChild,
   SmallHeader,
-  DetailsContainer,
 } from "./ContentContainerStyle";
 
 const ContentContainer = () => {
@@ -53,13 +52,13 @@ const ContentContainer = () => {
               <SmallHeader>{date}</SmallHeader>
             </LeftChild>
             <RightChild>
-              <DetailsContainer>
+              <div>
                 <Details>Real Feel: {Math.trunc(dataToday.main.feels_like)}°C</Details>
                 <Details>Humidiy: {dataToday.main.humidity}%</Details>
                 <Details>Cloud Cover: {dataToday.clouds.all}%</Details>
                 <Details>Min Temp: {Math.trunc(dataToday.main.temp_min)}°C</Details>
                 <Details>Max Temp: {Math.trunc(dataToday.main.temp_max)}°C</Details>
-              </DetailsContainer>
+              </div>
             </RightChild>
           </MainCard>
           <Days />

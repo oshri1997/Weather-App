@@ -5,7 +5,11 @@ const CardsContainer = styled.div`
   grid-template-columns: 1fr 1fr;
   width: 100%;
   row-gap: 20px;
-  column-gap: 10px;
+  column-gap: 20px;
+
+  @media (max-width: 1200px) {
+    column-gap: 12px;
+  }
 `;
 
 const DaysContainer = styled.div`

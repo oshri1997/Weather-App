@@ -6,6 +6,10 @@ const NavContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   height: 40px;
+  width: 100%;
+  @media (max-width: 1280px) {
+    width: 100%;
+  }
 `;
 
 const CityNameContainer = styled.div`

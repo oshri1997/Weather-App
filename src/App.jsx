@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import LeftSide from "./components/LeftSide/SearchContainer";
 import ContentContainer from "./components/RightSide/ContentContainer";
+
 const Hero = styled.div`
   height: 100vh;
   width: 100vw;
@@ -15,7 +16,12 @@ const Container = styled.div`
   border-radius: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 `;
+
 function App() {
   return (
     <Hero>
